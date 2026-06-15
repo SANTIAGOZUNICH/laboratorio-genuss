@@ -629,6 +629,11 @@ const cfg = {
 /* ── Helper: inyectar SVG ── */
 function setMockup(elId, producto, color, size) {
   const el = document.getElementById(elId);
+  const marca = document.getElementById('f2_marca')?.value || cfg.marca || 'laboratorio Genus';
+  const nombreProducto = document.getElementById('f2_nombre')?.value || cfg.nombreProducto || producto || '';
+  if (el) el.innerHTML = GENUS_MOCKUP.getSVG(producto || 'Crema', color || 'Incoloro', size, marca, nombreProducto);
+}
+  const el = document.getElementById(elId);
   if (el) el.innerHTML = GENUS_MOCKUP.getSVG(producto || 'Crema', color || 'Incoloro', size);
 }
 
