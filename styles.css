@@ -43,7 +43,7 @@
 .nav-create-product::after {
   content: 'NUEVO';
   position: absolute;
-  top: -14px;
+  top: -17px;
   right: -22px;
   background: #5cc6d2;
   color: white;
