@@ -27,4 +27,41 @@
         transform:scale(1.15);
         opacity:.8;
     }
+
+.hn-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-create-product {
+  position: relative;
+  font-weight: 800;
+  color: #0ea5b7 !important;
+}
+
+.nav-create-product::after {
+  content: 'NUEVO';
+  position: absolute;
+  top: -14px;
+  right: -22px;
+  background: #5cc6d2;
+  color: white;
+  font-size: 10px;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 20px;
+  animation: pulseGenus 4s infinite;
+}
+
+@keyframes pulseGenus {
+  0%, 85%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1.15);
+    opacity: .85;
+  }
+}
 }
