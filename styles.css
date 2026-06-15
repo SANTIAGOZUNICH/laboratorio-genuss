@@ -8,7 +8,7 @@
 .nav-create-product::after{
     content:'NUEVO';
     position:absolute;
-    top:-8px;
+    top:-12px;
     right:-18px;
     background:#0ea5b7;
     color:white;
