@@ -22,7 +22,7 @@ const FILL_COLORS = {
    Inspirado en el estilo de la imagen de referencia:
    frasco corto, ancho, hombros curvos, tapa plateada + bulbo grande
    ============================================================ */
-function svgSerum(color, size) {
+function svgSerum(color, size, marca = 'laboratorio Genus', nombreProducto = 'SERUM') {
   const c = FILL_COLORS[color] || FILL_COLORS['Incoloro'];
   const w = size, h = Math.round(size * 1.62);
 
@@ -491,14 +491,14 @@ function svgGel(color, size) {
 
 /* ── API pública ── */
 window.GENUS_MOCKUP = {
-  getSVG(producto, color, size) {
+ getSVG(producto, color, size, marca = 'laboratorio Genus', nombreProducto = producto) {
     const s = size || 200;
     const col = color || 'Incoloro';
     switch(producto) {
-      case 'Serum':   return svgSerum(col, s);
-      case 'Crema':   return svgCrema(col, s);
-      case 'Shampoo': return svgShampoo(col, s);
-      case 'Gel':     return svgGel(col, s);
+   case 'Serum': return svgSerum(col, s, marca, nombreProducto);
+case 'Crema': return svgCrema(col, s, marca, nombreProducto);
+case 'Shampoo': return svgShampoo(col, s, marca, nombreProducto);
+case 'Gel': return svgGel(col, s, marca, nombreProducto);
       default:        return svgCrema(col, s);
     }
   },
