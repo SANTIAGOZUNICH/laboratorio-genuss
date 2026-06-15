@@ -7,6 +7,7 @@
 
 .nav-create-product {
   position: relative;
+  display: inline-block;
   font-weight: 800;
   color: #0ea5b7 !important;
 }
@@ -15,7 +16,8 @@
   content: 'NUEVO';
   position: absolute;
   top: -14px;
-  right: -22px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #5cc6d2;
   color: white;
   font-size: 10px;
@@ -23,6 +25,7 @@
   padding: 3px 7px;
   border-radius: 20px;
   animation: pulseGenus 4s infinite;
+}
 }
 
 @keyframes pulseGenus {
