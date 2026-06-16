@@ -593,13 +593,19 @@
             <div id="step4Summary"></div>
             <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:14px;">
               <div class="dtp-price-row">
-                <label>Desarrollo de fórmula personalizada</label>
-                <span id="precioDisplay">$ 15.000</span>
-              </div>
-              <div class="dtp-price-total">
-                <label>Total</label>
-                <span id="totalDisplay">$ 15.000</span>
-              </div>
+  <label>Desarrollo de fórmula personalizada</label>
+  <span id="precioDisplay">$ 190.000 + IVA</span>
+</div>
+
+<div class="dtp-price-row">
+  <label>IVA (21%)</label>
+  <span id="ivaDisplay">$ 39.900</span>
+</div>
+
+<div class="dtp-price-total">
+  <label>Total</label>
+  <span id="totalDisplay">$ 229.900</span>
+</div>
             </div>
             <div class="dtp-secure-note">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -639,8 +645,14 @@
 ============================================================ */
 
 const MERCADOPAGO_URL = "https://link.mercadopago.com.ar/REEMPLAZAR_CON_TU_LINK";
-const PRECIO_FORMULA  = 15000;
 
+const PRECIO_FORMULA = 190000;
+const IVA_PORCENTAJE = 0.21;
+
+const subtotal = PRECIO_FORMULA;
+const iva = subtotal * IVA_PORCENTAJE;
+const total = subtotal + iva;
+  
 const CONTENIDOS = { Serum: "30 ml", Crema: "50 gr", Shampoo: "200 ml", Gel: "250 gr" };
 
 const ACTIVOS_POR_PRODUCTO = {
@@ -1021,9 +1033,15 @@ function prepareStep4() {
   const el4 = document.getElementById("step4Img");
   if (el4) el4.innerHTML = window.GENUS_MOCKUP.getSVG(cfg.producto, cfg.color, 68, marca, nombreProd);
   document.getElementById("step4Details").innerHTML = '<strong>' + esc(cfg.producto + (cfg.marca ? " — " + cfg.marca : "")) + '</strong>' + '<span>Activos: ' + esc(cfg.activos.join(", ")) + '</span>' + '<span>Textura: ' + esc(cfg.textura) + '</span>' + '<span>Color: ' + esc(cfg.color) + '</span>' + '<span>Aroma: ' + esc(cfg.aroma) + '</span>' + '<span>Contenido: ' + esc(cfg.contenido) + '</span>';
-  const precio = "$ " + PRECIO_FORMULA.toLocaleString("es-AR");
-  document.getElementById("precioDisplay").textContent = precio;
-  document.getElementById("totalDisplay").textContent = precio;
+const subtotal = PRECIO_FORMULA;
+const iva = subtotal * 0.21;
+const total = subtotal + iva;
+
+document.getElementById("precioDisplay").textContent =
+  "$ " + subtotal.toLocaleString("es-AR") + " + IVA";
+
+document.getElementById("totalDisplay").textContent =
+  "$ " + total.toLocaleString("es-AR");
 }
 
 function realizarPago() {
