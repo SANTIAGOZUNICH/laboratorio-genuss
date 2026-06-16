@@ -737,12 +737,19 @@ const cfg = {
 /* ── Helper: inyectar SVG ── */
 function setMockup(elId, producto, color, size) {
   const el = document.getElementById(elId);
-  const marca = document.getElementById('f2_marca')?.value || cfg.marca || 'laboratorio Genus';
+  const marca = document.getElementById('f2_marca')?.value || cfg.marca || 'Laboratorio Genus';
   const nombreProducto = document.getElementById('f2_nombre')?.value || cfg.nombreProducto || producto || '';
-  if (el) el.innerHTML = GENUS_MOCKUP.getSVG(producto || 'Crema', color || 'Incoloro', size, marca, nombreProducto);
+
+  if (el && typeof GENUS_MOCKUP !== 'undefined') {
+    el.innerHTML = GENUS_MOCKUP.getSVG(
+      producto || 'Crema',
+      color || 'Incoloro',
+      size,
+      marca,
+      nombreProducto
+    );
+  }
 }
-  const el = document.getElementById(elId);
-  if (el) el.innerHTML = GENUS_MOCKUP.getSVG(producto || 'Crema', color || 'Incoloro', size);
 }
 
 /* ── Init tarjetas paso 1 con color Incoloro ── */
