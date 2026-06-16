@@ -20,68 +20,7 @@
   font-size: 14px;
   white-space: nowrap;
 }
-@media (max-width: 768px) {
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
 
-  .container,
-  .g-wrap,
-  .dtp-wrap {
-    width: calc(100% - 24px) !important;
-    max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .g-hero,
-  .g-section,
-  .g-footer,
-  .hn {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden;
-  }
-
-  .g-hero-grid,
-  .g-section-grid,
-  .g-cert-grid,
-  .g-procesos-grid,
-  .g-indicadores-grid,
-  .g-porque-grid {
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-.hn-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-create-product {
-  position: relative;
-  display: inline-block;
-  font-weight: 800;
-  color: #0ea5b7 !important;
-}
-
-.nav-create-product::after {
-  content: 'NUEVO';
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #5cc6d2;
-  color: white;
-  font-size: 10px;
-  line-height: 1;
-  padding: 3px 7px;
-  border-radius: 20px;
-}
 
 @media (max-width: 768px) {
   body {
