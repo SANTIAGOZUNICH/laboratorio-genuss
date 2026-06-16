@@ -507,11 +507,9 @@
         </div>
         <div class="dtp-field">
           <label>Textura</label>
-          <select id="f2_textura">
-            <option value="">Seleccioná una textura...</option>
-            <option>Nutritiva / Hidratante</option>
-            <option>Crema Gel / Liviana</option>
-          </select>
+ <select id="f2_textura">
+  <option value="">Seleccioná una textura...</option>
+</select>
         </div>
       </div>
       <div class="dtp-col-form">
@@ -660,6 +658,13 @@ const ACTIVOS_POR_PRODUCTO = {
   Crema: ["Ácido Hialurónico", "Niacinamida", "Vitamina C", "Retinol", "Colágeno", "Pantenol", "Aloe Vera", "Cafeína", "Vitamina E"],
   Shampoo: ["Pantenol", "Aloe Vera", "Colágeno", "Cafeína", "Vitamina E", "Niacinamida"],
   Gel: ["Ácido Hialurónico", "Niacinamida", "Aloe Vera", "Pantenol", "Cafeína", "Ácido Glicólico"]
+};
+
+  const TEXTURAS_POR_PRODUCTO = {
+  Serum: ["Liviana", "Concentrada"],
+  Shampoo: ["Fluida", "Cremosa"],
+  Crema: ["Liviana", "Nutritiva"],
+  Gel: ["Ligero", "Denso"]
 };
 
 const COLORES_BASE = ["Incoloro", "Blanco", "Rosa", "Rojo", "Azul", "Amarillo", "Verde", "Lila"];
@@ -906,6 +911,7 @@ function goStep(from, to) {
   if (from === 1 && to === 2) {
     if (!cfg.producto) { alert("Por favor seleccioná un producto para continuar."); return; }
     prepareStep2();
+    
   }
   if (from === 2 && to === 3) {
     if (cfg.activos.length === 0) { alert("Por favor seleccioná al menos 1 activo."); return; }
@@ -959,6 +965,12 @@ function prepareStep2() {
   document.getElementById("f2_contenido").value = cfg.contenido;
   if (cfg.marca) document.getElementById("f2_marca").value = cfg.marca;
   if (cfg.nombreProducto) document.getElementById("f2_nombre").value = cfg.nombreProducto;
+  const texturaSelect = document.getElementById("f2_textura");
+const texturas = TEXTURAS_POR_PRODUCTO[cfg.producto] || [];
+
+texturaSelect.innerHTML =
+  '<option value="">Seleccioná una textura...</option>' +
+  texturas.map(t => `<option value="${t}">${t}</option>`).join("");
   if (cfg.textura) document.getElementById("f2_textura").value = cfg.textura;
   if (cfg.aroma) document.getElementById("f2_aroma").value = cfg.aroma;
   setMockup("step2ImgPreview", cfg.producto, cfg.color || "Incoloro", 190);
