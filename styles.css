@@ -165,5 +165,45 @@
     max-width: 100%;
   }
 }
+
+    @media (max-width: 768px) {
+  .exact-home,
+  .home-shot-wrap,
+  .home-shot,
+  .hotspot {
+    display: none !important;
+  }
+
+  .mobile-home {
+    display: block !important;
+    padding: 42px 22px;
+    background: #07172f;
+    color: white;
+  }
+
+  .mobile-home h1 {
+    font-size: 34px;
+    line-height: 1.1;
+    margin: 0 0 18px;
+  }
+
+  .mobile-home p {
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.78);
+    margin-bottom: 28px;
+  }
+
+  .mobile-home a {
+    display: block;
+    text-align: center;
+    background: #159ab0;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+}
   }
 }
