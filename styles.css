@@ -58,5 +58,76 @@
   border-radius:20px;
   line-height:1;
 }
+ 
+  @media (max-width: 768px) {
+  .hn-inner {
+    height: auto;
+    min-height: 72px;
+    padding: 10px 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hn-logo {
+    min-width: auto;
+  }
+
+  .hn-logo img {
+    height: 54px;
+  }
+
+  .hn-links {
+    width: 100%;
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+    padding: 10px 0 4px;
+  }
+
+  .hn-links a {
+    font-size: 13px;
+  }
+
+  .nav-create-product::after {
+    top: -12px;
+    right: -16px;
+    font-size: 9px;
+  }
+
+  .hn-right {
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  .hn-cta {
+    padding: 11px 14px;
+    font-size: 11px;
+  }
+
+  .container,
+  .g-wrap,
+  .dtp-wrap {
+    width: calc(100% - 24px) !important;
+  }
+
+  .g-hero-grid,
+  .g-section-grid,
+  .g-cert-grid,
+  .g-procesos-grid,
+  .g-indicadores-grid,
+  .g-porque-grid,
+  .dtp-step2-grid,
+  .dtp-step3-grid,
+  .dtp-step4-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+  }
+}
   }
 }
