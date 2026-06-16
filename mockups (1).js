@@ -131,7 +131,7 @@ function svgSerum(color, size, marca, nombreProducto) {
 <rect x="48" y="182" width="84" height="54" rx="2" fill="none" stroke="#ccc" stroke-width=".75"/>
 <text x="90" y="203" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="300" letter-spacing="3.5" fill="#1a1a2e">${nombreProducto}</text>
 <line x1="56" y1="210" x2="124" y2="210" stroke="#aaa" stroke-width=".75"/>
-<text x="90" y="225" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="2" fill="#666">${marcaLabel}</text>
+<text x="90" y="225" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" letter-spacing="2" fill="#666">${marcaLabel}</text>
 
 <!-- ââ CAP LAYER â tapa platino + bulbo gotero, fijo ââ -->
 <!-- anillo de rosca (collar platino) -->
@@ -255,7 +255,7 @@ function svgCrema(color, size, marca, nombreProducto) {
 <rect x="68" y="112" width="124" height="56" rx="2" fill="none" stroke="#ccc" stroke-width=".75"/>
 <text x="130" y="133" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="300" letter-spacing="4" fill="#1a1a2e">${nombreProducto}</text>
 <line x1="78" y1="140" x2="182" y2="140" stroke="#aaa" stroke-width=".75"/>
-<text x="130" y="157" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="6.5" letter-spacing="2" fill="#666">${marcaLabel}</text>
+<text x="130" y="157" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="17" letter-spacing="2" fill="#666">${marcaLabel}</text>
 
 <!-- ââ CAP LAYER â tapa blanca, fija ââ -->
 <ellipse cx="130" cy="74" rx="112" ry="22" fill="url(#cr-lid-${size})"/>
@@ -356,9 +356,9 @@ function svgShampoo(color, size, marca, nombreProducto) {
 <!-- ââ LABEL LAYER â fijo ââ -->
 <rect x="20" y="142" width="96" height="68" rx="3" fill="white" opacity=".90"/>
 <rect x="22" y="144" width="92" height="64" rx="2" fill="none" stroke="#ccc" stroke-width=".75"/>
-<text x="68" y="166" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="300" letter-spacing="2.5" fill="#1a1a2e">${nombreProducto}</text>
+<text x="68" y="166" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="300" letter-spacing="2.5" fill="#1a1a2e">${nombreProducto}</text>
 <line x1="30" y1="173" x2="106" y2="173" stroke="#aaa" stroke-width=".75"/>
-<text x="68" y="191" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="6" letter-spacing="2" fill="#666">${marcaLabel}</text>
+<text x="68" y="191" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="10" letter-spacing="2" fill="#666">${marcaLabel}</text>
 
 <!-- ââ CAP LAYER â pump platino, fijo ââ -->
 <!-- collar platino -->
