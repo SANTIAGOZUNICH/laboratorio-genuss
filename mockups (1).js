@@ -478,9 +478,9 @@ function svgGel(color, size, marca, nombreProducto) {
 <!-- ââ LABEL LAYER â fijo ââ -->
 <rect x="80" y="108" width="120" height="60" rx="3" fill="white" opacity=".90"/>
 <rect x="82" y="110" width="116" height="56" rx="2" fill="none" stroke="#ccc" stroke-width=".75"/>
-<text x="140" y="131" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="300" letter-spacing="4" fill="#1a1a2e">${nombreProducto}</text>
+<text x="140" y="131" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="300" letter-spacing="4" fill="#1a1a2e">${nombreProducto}</text>
 <line x1="92" y1="138" x2="188" y2="138" stroke="#aaa" stroke-width=".75"/>
-<text x="140" y="156" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" letter-spacing="2" fill="#666">${marcaLabel}</text>
+<text x="140" y="156" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="15" letter-spacing="2" fill="#666">${marcaLabel}</text>
 
 <!-- ââ CAP LAYER â tapa blanca amplia, fija ââ -->
 <ellipse cx="140" cy="68" rx="128" ry="24" fill="url(#gl-lid-${size})"/>
