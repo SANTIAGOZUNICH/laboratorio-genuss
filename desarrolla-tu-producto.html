@@ -1039,7 +1039,10 @@ const total = subtotal + iva;
 
 document.getElementById("precioDisplay").textContent =
   "$ " + subtotal.toLocaleString("es-AR") + " + IVA";
-
+  
+document.getElementById("ivaDisplay").textContent =
+  "$ " + iva.toLocaleString("es-AR");
+  
 document.getElementById("totalDisplay").textContent =
   "$ " + total.toLocaleString("es-AR");
 }
