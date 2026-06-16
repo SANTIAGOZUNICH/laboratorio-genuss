@@ -5,36 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calidad | Laboratorio Genus</title>
   <meta name="description" content="Laboratorio Genus: habilitación ANMAT, Buenas Prácticas de Manufactura (GMP) e ISO 9001. Procesos controlados y trazabilidad total en cada producción." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles-internal.css" />
+  <link rel="stylesheet" href="./styles.css?v=10" />
+<link rel="stylesheet" href="./styles-internal.css?v=10" />
+   <style>
+.hn {
+  width: 100%;
+  background: #fff;
+  border-top: 3px solid #80cbd3;
+  border-bottom: 2px solid #009fd0;
+  font-family: Arial, sans-serif;
+}
+
+.hn-inner {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 28px;
+}
+
+.hn-logo img {
+  height: 90px;
+  display: block;
+}
+
+.hn-logo {
+  min-width: 210px;
+  display: flex;
+  align-items: center;
+}
+
+.hn-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.hn-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.hn-links a {
+  text-decoration: none;
+  color: #071426;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hn-links a:hover,
+.hn-links a.act {
+  color: #009fba;
+  border-bottom: 2px solid #009fba;
+  padding-bottom: 22px;
+}
+
+.nav-create-product {
+  color: #00a9bd !important;
+}
+
+.hn-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hn-wa {
+  width: 38px;
+  height: 38px;
+  background: #23c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.hn-wa-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hn-cta {
+  background: #159ab0;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hn-ham {
+  display: none;
+}
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="g-nav">
-  <div class="g-nav-inner">
-    <a class="g-nav-logo" href="index.html"><img src="assets/logo-genus.png" alt="Laboratorio Genus"></a>
-    <ul class="g-nav-links" id="navLinks">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="quienes-somos.html">Nosotros</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="llave-en-mano.html">Llave en mano</a></li>
-      <li><a href="calidad.html" class="active">Calidad</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="desarrolla-tu-producto.html" style="background:var(--aqua);color:#fff;border-radius:6px;padding:8px 14px;font-weight:900;">Desarrollá tu producto</a></li>
+<nav class="hn">
+  <div class="hn-inner">
+    <a class="hn-logo" href="index.html">
+      <img src="assets/logo-genus.png" alt="Laboratorio Genus">
+    </a>
+
+  <ul class="hn-links">
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="quienes-somos.html">Nosotros</a></li>
+  <li><a href="productos.html" class="act">Productos</a></li>
+  <li><a href="llave-en-mano.html">Llave en mano</a></li>
+  <li><a href="calidad.html">Calidad</a></li>
+  <li><a href="contacto.html">Contacto</a></li>
+        <a href="desarrolla-tu-producto.html" class="nav-create-product">
+          Crea tu producto
+        </a>
+      </li>
     </ul>
-    <div class="g-nav-actions">
-      <a class="g-btn-wa" href="https://wa.me/5491124980861" target="_blank">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.539 4.048 1.481 5.751L0 24l6.389-1.474A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.803 9.803 0 0 1-5.003-1.372l-.359-.213-3.721.858.88-3.62-.234-.372A9.795 9.795 0 0 1 2.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
-        WhatsApp
+
+    <div class="hn-right">
+      <a class="hn-wa" href="https://wa.me/5491124980861" target="_blank" aria-label="WhatsApp">
+        <div class="hn-wa-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.539 4.048 1.481 5.751L0 24l6.389-1.474A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.803 9.803 0 0 1-5.003-1.372l-.359-.213-3.721.858.88-3.62-.234-.372A9.795 9.795 0 0 1 2.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/>
+          </svg>
+        </div>
       </a>
-      <a class="g-btn-cta" href="cotizador.html">Solicitar cotización</a>
+
+      <a class="hn-cta" href="cotizador.html">
+        SOLICITAR COTIZACIÓN →
+      </a>
     </div>
-    <button class="g-nav-hamburger" id="hamburger" aria-label="Menú">
+
+    <button class="hn-ham" id="ham" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+
+<!-- HERO -->
+<section class="g-hero">
+  <div class="g-hero-grid">
+    <span class="g-hero-tag">Catálogo de productos</span>
+    <h1>Qué productos elaboramos</h1>
+    <p>Desarrollamos y fabricamos una amplia variedad de productos cosméticos para marcas de todos los tamaños. Formulaciones propias, activos de calidad y producción controlada.</p>
+    <div class="g
 
 <!-- HERO -->
 <section class="g-hero">
