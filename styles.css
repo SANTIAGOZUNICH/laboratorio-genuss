@@ -36,5 +36,27 @@
   90% {
     transform: scale(1.15);
     opacity: .85;
+.nav-create-product{
+  position:relative;
+  color:#00a9bd !important;
+  font-weight:700;
+}
+
+.nav-create-product::after{
+  content:'NUEVO';
+  position:absolute;
+  top:-14px;
+  right:-20px;
+
+  background:#5cc6d2;
+  color:#fff;
+
+  font-size:10px;
+  font-weight:700;
+
+  padding:3px 7px;
+  border-radius:20px;
+  line-height:1;
+}
   }
 }
