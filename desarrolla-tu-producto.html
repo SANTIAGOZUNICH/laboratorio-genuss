@@ -803,7 +803,7 @@ const cfg = {
 };
 
 /* ── Helper: inyectar SVG ── */
-function setMockup(elId, producto, color, size) {
+Function setMockup(elId, producto, color, size) {
   const el = document.getElementById(elId);
   const marca = document.getElementById('f2_marca')?.value || cfg.marca || 'Laboratorio Genus';
   const nombreProducto = document.getElementById('f2_nombre')?.value || cfg.nombreProducto || producto || '';
@@ -817,7 +817,6 @@ function setMockup(elId, producto, color, size) {
       nombreProducto
     );
   }
-}
 }
 
 /* ── Init tarjetas paso 1 con color Incoloro ── */
@@ -1021,7 +1020,6 @@ const iconWave=ico('M2 12c1.5-4 4-6 6-6s4.5 4 7 4 4.5-2 7-2');
 const iconPkg=ico('M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z');
 
 /* NAV */
-/* NAV */
 const hamBtn = document.getElementById('ham');
 const navLinks = document.querySelector('.hn-links');
 
@@ -1030,7 +1028,7 @@ if (hamBtn && navLinks) {
     navLinks.classList.toggle('open');
   });
 }
-}
+
 </script>
 </body>
 </html>
