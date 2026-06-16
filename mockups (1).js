@@ -129,9 +129,9 @@ function svgSerum(color, size, marca, nombreProducto) {
 <!-- ââ LABEL LAYER â fijo ââ -->
 <rect x="46" y="180" width="88" height="58" rx="3" fill="white" opacity=".90"/>
 <rect x="48" y="182" width="84" height="54" rx="2" fill="none" stroke="#ccc" stroke-width=".75"/>
-<text x="90" y="203" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="300" letter-spacing="3.5" fill="#1a1a2e">${nombreProducto}</text>
+<text x="90" y="203" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="300" letter-spacing="3.5" fill="#1a1a2e">${nombreProducto}</text>
 <line x1="56" y1="210" x2="124" y2="210" stroke="#aaa" stroke-width=".75"/>
-<text x="90" y="225" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="6" letter-spacing="2" fill="#666">${marcaLabel}</text>
+<text x="90" y="225" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="2" fill="#666">${marcaLabel}</text>
 
 <!-- ââ CAP LAYER â tapa platino + bulbo gotero, fijo ââ -->
 <!-- anillo de rosca (collar platino) -->
