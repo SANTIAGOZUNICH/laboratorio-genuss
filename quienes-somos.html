@@ -6,107 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Productos | Laboratorio Genus</title>
   <meta name="description" content="Líneas de productos cosméticos que desarrollamos y fabricamos: capilar, facial, corporal, serums, cremas, geles y más." />
- <link rel="stylesheet" href="./styles.css?v=10" />
-<link rel="stylesheet" href="./styles-internal.css?v=10" />
-   <style>
-.hn {
-  width: 100%;
-  background: #fff;
-  border-top: 3px solid #80cbd3;
-  border-bottom: 2px solid #009fd0;
-  font-family: Arial, sans-serif;
-}
-
-.hn-inner {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding: 0 28px;
-}
-
-.hn-logo img {
-  height: 90px;
-  display: block;
-}
-
-.hn-logo {
-  min-width: 210px;
-  display: flex;
-  align-items: center;
-}
-
-.hn-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin: 0;
-  padding: 0;
-}
-
-.hn-links li {
-  margin: 0;
-  padding: 0;
-}
-
-.hn-links a {
-  text-decoration: none;
-  color: #071426;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.hn-links a:hover,
-.hn-links a.act {
-  color: #009fba;
-  border-bottom: 2px solid #009fba;
-  padding-bottom: 22px;
-}
-
-.nav-create-product {
-  color: #00a9bd !important;
-}
-
-.hn-right {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.hn-wa {
-  width: 38px;
-  height: 38px;
-  background: #23c55e;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.hn-wa-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hn-cta {
-  background: #159ab0;
-  color: white;
-  padding: 16px 28px;
-  border-radius: 5px;
-  font-weight: 800;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.hn-ham {
-  display: none;
-}
-</style>
-</head>
+ <link rel="stylesheet" href="styles.css" />
+   </head>
 <body>
 
 <!-- NAV -->
@@ -364,9 +265,15 @@
 </footer>
 
 <script>
-  const ham = document.getElementById('hamburger');
-  const nav = document.getElementById('navLinks');
-  ham.addEventListener('click', () => nav.classList.toggle('open'));
+document.addEventListener('DOMContentLoaded', function () {
+  var hamBtn = document.getElementById('ham');
+  var navLinks = document.querySelector('.hn-links');
+  if (hamBtn && navLinks) {
+    hamBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+  }
+});
 </script>
 </body>
 </html>
