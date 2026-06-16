@@ -707,7 +707,71 @@
     <a class="g-footer-cta" href="cotizador.html">Solicitar cotización →</a>
   </div>
 </footer>
+<script>
+window.GENUS_MOCKUP = {
+  getSVG: function(producto, color, size, marca, nombreProducto) {
+    const w = size || 150;
+    const labelMarca = marca || 'TU MARCA';
+    const labelNombre = nombreProducto || producto || 'Producto';
 
+    const colors = {
+      'Incoloro': '#eef8fb',
+      'Blanco': '#ffffff',
+      'Rosa': '#f7c6d5',
+      'Rojo': '#d95454',
+      'Azul': '#7fb7e8',
+      'Amarillo': '#f5d66b',
+      'Verde': '#94cf92',
+      'Lila': '#c5a7e8'
+    };
+
+    const fill = colors[color] || '#eef8fb';
+
+    if (producto === 'Serum') {
+      return `
+      <svg width="${w}" height="${w}" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="66" y="14" width="28" height="22" rx="4" fill="#d6b56d"/>
+        <rect x="72" y="3" width="16" height="18" rx="6" fill="#07172f"/>
+        <rect x="52" y="34" width="56" height="104" rx="14" fill="${fill}" stroke="#7bbdcc" stroke-width="3"/>
+        <rect x="60" y="72" width="40" height="36" rx="4" fill="white" opacity=".86"/>
+        <text x="80" y="88" text-anchor="middle" font-size="8" font-weight="700" fill="#169ab0">${labelMarca}</text>
+        <text x="80" y="101" text-anchor="middle" font-size="7" fill="#07172f">${labelNombre}</text>
+      </svg>`;
+    }
+
+    if (producto === 'Crema') {
+      return `
+      <svg width="${w}" height="${w}" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="42" y="58" width="76" height="62" rx="12" fill="${fill}" stroke="#7bbdcc" stroke-width="3"/>
+        <rect x="46" y="45" width="68" height="18" rx="7" fill="#d6b56d"/>
+        <rect x="54" y="78" width="52" height="26" rx="4" fill="white" opacity=".86"/>
+        <text x="80" y="90" text-anchor="middle" font-size="8" font-weight="700" fill="#169ab0">${labelMarca}</text>
+        <text x="80" y="101" text-anchor="middle" font-size="7" fill="#07172f">${labelNombre}</text>
+      </svg>`;
+    }
+
+    if (producto === 'Shampoo') {
+      return `
+      <svg width="${w}" height="${w}" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="55" y="26" width="50" height="110" rx="18" fill="${fill}" stroke="#7bbdcc" stroke-width="3"/>
+        <rect x="63" y="12" width="34" height="20" rx="5" fill="#07172f"/>
+        <rect x="61" y="70" width="38" height="36" rx="4" fill="white" opacity=".86"/>
+        <text x="80" y="86" text-anchor="middle" font-size="8" font-weight="700" fill="#169ab0">${labelMarca}</text>
+        <text x="80" y="99" text-anchor="middle" font-size="7" fill="#07172f">${labelNombre}</text>
+      </svg>`;
+    }
+
+    return `
+    <svg width="${w}" height="${w}" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+      <rect x="50" y="32" width="60" height="106" rx="16" fill="${fill}" stroke="#7bbdcc" stroke-width="3"/>
+      <rect x="58" y="18" width="44" height="20" rx="6" fill="#d6b56d"/>
+      <rect x="58" y="76" width="44" height="34" rx="4" fill="white" opacity=".86"/>
+      <text x="80" y="91" text-anchor="middle" font-size="8" font-weight="700" fill="#169ab0">${labelMarca}</text>
+      <text x="80" y="103" text-anchor="middle" font-size="7" fill="#07172f">${labelNombre}</text>
+    </svg>`;
+  }
+};
+</script>
 <script src="./mockups.js?v=25"></script>
 <script>
   <script>
