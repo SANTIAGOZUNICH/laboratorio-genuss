@@ -515,41 +515,36 @@
     <span class="dtp-badge">PASO 1 DE 4</span>
     <h2 class="dtp-step1-title">¿Qué producto querés desarrollar?</h2>
     <p class="dtp-step1-sub">Elegí el tipo de producto que querés crear.</p>
-    <div class="dtp-products-grid">
 
-      <!-- SERUM -->
-      <div class="dtp-product-card" data-product="Serum" data-content="30 ml" onclick="selectProduct(this)">
-        <div class="dtp-card-check">&#10003;</div>
-        <div class="dtp-product-img-wrap" id="card-Serum"></div>
-        <div class="dtp-product-name">Serum</div>
-      </div>
 
-      <!-- CREMA -->
-      <div class="dtp-product-card" data-product="Crema" data-content="50 gr" onclick="selectProduct(this)">
-        <div class="dtp-card-check">&#10003;</div>
-        <div class="dtp-product-img-wrap" id="card-Crema"></div>
-        <div class="dtp-product-name">Crema</div>
-      </div>
+  <div class="dtp-products-grid">
 
-      <!-- SHAMPOO -->
-      <div class="dtp-product-card" data-product="Shampoo" data-content="200 ml" onclick="selectProduct(this)">
-        <div class="dtp-card-check">&#10003;</div>
-        <div class="dtp-product-img-wrap" id="card-Shampoo"></div>
-        <div class="dtp-product-name">Shampoo</div>
-      </div>
-
-      <!-- GEL -->
-      <div class="dtp-product-card" data-product="Gel" data-content="250 gr" onclick="selectProduct(this)">
-        <div class="dtp-card-check">&#10003;</div>
-        <div class="dtp-product-img-wrap" id="card-Gel"></div>
-        <div class="dtp-product-name">Gel</div>
-      </div>
-
-    </div>
-    <div class="dtp-nav center">
-      <button class="dtp-btn-next" onclick="goStep(1,2)">SIGUIENTE &nbsp;&#8594;</button>
-    </div>
+  <div class="dtp-product-card" data-product="Serum" data-content="30 ml" onclick="selectProduct(this)">
+    <div class="dtp-card-check">✓</div>
+    <div class="dtp-product-img-wrap" id="card-Serum"></div>
+    <div class="dtp-product-name">Serum</div>
   </div>
+
+  <div class="dtp-product-card" data-product="Crema" data-content="50 gr" onclick="selectProduct(this)">
+    <div class="dtp-card-check">✓</div>
+    <div class="dtp-product-img-wrap" id="card-Crema"></div>
+    <div class="dtp-product-name">Crema</div>
+  </div>
+
+  <div class="dtp-product-card" data-product="Shampoo" data-content="200 ml" onclick="selectProduct(this)">
+    <div class="dtp-card-check">✓</div>
+    <div class="dtp-product-img-wrap" id="card-Shampoo"></div>
+    <div class="dtp-product-name">Shampoo</div>
+  </div>
+
+  <div class="dtp-product-card" data-product="Gel" data-content="250 gr" onclick="selectProduct(this)">
+    <div class="dtp-card-check">✓</div>
+    <div class="dtp-product-img-wrap" id="card-Gel"></div>
+    <div class="dtp-product-name">Gel</div>
+  </div>
+>
+  
+</div>
 
   <!-- ═══════ PASO 2 ═══════ -->
   <div class="dtp-panel" id="panel2">
@@ -771,18 +766,15 @@ window.GENUS_MOCKUP = {
     </svg>`;
   }
 };
-</script>
-<script src="./mockups.js?v=25"></script>
-<script>
-  <script>
-console.log('GENUS_MOCKUP:', typeof GENUS_MOCKUP);
-</script>
-/* ═══════════════════════════════════════════
-   CONFIGURACIÓN
-═══════════════════════════════════════════ */
-const MERCADOPAGO_URL = "https://link.mercadopago.com.ar/REEMPLAZAR_CON_TU_LINK";
-const PRECIO_FORMULA  = 15000;
 
+  <script src="./mockups.js?v=25"></script>
+
+<script>
+console.log('GENUS_MOCKUP:', typeof GENUS_MOCKUP);
+
+/* CONFIGURACIÓN */
+const MERCADOPAGO_URL = "https://link.mercadopago.com.ar/REEMPLAZAR_CON_TU_LINK";
+const PRECIO_FORMULA = 15000;
 const CONTENIDOS = { Serum:'30 ml', Crema:'50 gr', Shampoo:'200 ml', Gel:'250 gr' };
 
 const ACTIVOS_POR_PRODUCTO = {
@@ -1028,7 +1020,6 @@ if (hamBtn && navLinks) {
     navLinks.classList.toggle('open');
   });
 }
-
 </script>
 </body>
 </html>
