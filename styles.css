@@ -174,33 +174,13 @@
     text-decoration: underline;
   }
 
-  .nav-create-product::after {
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 9px;
-  }
-
-  .container,
-  .g-wrap,
-  .dtp-wrap,
   .g-hero-grid,
-  .g-section-grid {
+  .g-wrap,
+  .container {
     width: calc(100% - 28px) !important;
     max-width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
-  }
-
-  .g-hero-grid,
-  .g-section-grid,
-  .g-cert-grid,
-  .g-procesos-grid,
-  .g-indicadores-grid,
-  .g-porque-grid,
-  .dtp-step2-grid,
-  .dtp-step3-grid,
-  .dtp-step4-grid {
     grid-template-columns: 1fr !important;
   }
 
