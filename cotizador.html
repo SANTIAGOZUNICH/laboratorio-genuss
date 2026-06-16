@@ -6,8 +6,7 @@
   <title>Cotizador | Laboratorio Genus</title>
   <meta name="description" content="Solicite una cotización de fabricación cosmética con Laboratorio Genus. Proceso guiado en pocos pasos." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles-internal.css" />
-</head>
+  </head>
 <body>
 
 <!-- NAV -->
@@ -305,130 +304,15 @@
 </footer>
 
 <script>
-  // --- Hamburger ---
-  const ham = document.getElementById('hamburger');
-  const nav = document.getElementById('navLinks');
-  ham.addEventListener('click', () => nav.classList.toggle('open'));
-
-  // --- State ---
-  const state = {
-    nombre: '', empresa: '', email: '', wa: '',
-    producto: '', cantidad: '',
-    formula: '', desarrollo: '', envases: '', packaging: '',
-    comentarios: ''
-  };
-
-  let currentStep = 1;
-  const totalSteps = 7;
-
-  // --- Navigation ---
-  function goNext(step) {
-    if (step === 1) {
-      state.nombre = document.getElementById('f_nombre').value.trim();
-      state.email  = document.getElementById('f_email').value.trim();
-      state.wa     = document.getElementById('f_wa').value.trim();
-      state.empresa= document.getElementById('f_empresa').value.trim();
-      if (!state.nombre || !state.email || !state.wa) {
-        alert('Por favor complete nombre, email y WhatsApp para continuar.');
-        return;
-      }
-    }
-    if (step === 2 && (!state.producto || !state.cantidad)) {
-      alert('Seleccione el tipo de producto y la cantidad estimada.');
-      return;
-    }
-    if (step === 3 && !state.formula) { alert('Por favor seleccione una opción.'); return; }
-    if (step === 4 && !state.desarrollo) { alert('Por favor seleccione una opción.'); return; }
-    if (step === 5 && !state.envases) { alert('Por favor seleccione una opción.'); return; }
-    if (step === 6 && !state.packaging) { alert('Por favor seleccione una opción.'); return; }
-
-    if (step === 6) buildSummary();
-
-    showStep(step + 1);
-  }
-
-  function goBack(step) { showStep(step - 1); }
-
-  function showStep(n) {
-    document.querySelectorAll('.g-wizard-panel').forEach(p => p.classList.remove('active'));
-    document.getElementById('step' + n).classList.add('active');
-    document.querySelectorAll('.g-wizard-step-dot').forEach((d, i) => {
-      d.classList.remove('active', 'done');
-      if (i + 1 < n) d.classList.add('done');
-      if (i + 1 === n) d.classList.add('active');
+document.addEventListener('DOMContentLoaded', function () {
+  var hamBtn = document.getElementById('ham');
+  var navLinks = document.querySelector('.hn-links');
+  if (hamBtn && navLinks) {
+    hamBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
     });
-    currentStep = n;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-  // --- Option selectors ---
-  function selectOption(el, field) {
-    const parent = el.parentElement;
-    parent.querySelectorAll('.g-option-label').forEach(l => l.classList.remove('selected'));
-    el.classList.add('selected');
-    state[field] = el.textContent.trim();
-  }
-
-  function selectYN(el, field) {
-    const parent = el.parentElement;
-    parent.querySelectorAll('.g-yn-label').forEach(l => l.classList.remove('selected'));
-    el.classList.add('selected');
-    state[field] = el.textContent.trim();
-  }
-
-  // --- Build summary ---
-  function buildSummary() {
-    state.comentarios = document.getElementById('f_comentarios').value.trim();
-    const rows = [
-      ['Nombre', state.nombre],
-      ['Empresa', state.empresa || '—'],
-      ['Email', state.email],
-      ['WhatsApp', state.wa],
-      ['Producto', state.producto],
-      ['Cantidad', state.cantidad],
-      ['¿Tiene fórmula?', state.formula],
-      ['¿Necesita desarrollo?', state.desarrollo],
-      ['¿Tiene envases?', state.envases],
-      ['¿Genus consigue envases?', state.packaging],
-      ['Comentarios', state.comentarios || '—'],
-    ];
-    const card = document.getElementById('summaryCard');
-    card.innerHTML = '<h4>Resumen de su solicitud</h4>' + rows.map(([l, v]) =>
-      `<div class="g-summary-row"><label>${l}</label><span>${v}</span></div>`
-    ).join('');
-  }
-
-  // --- Submit ---
-  function submitQuote() {
-    state.comentarios = document.getElementById('f_comentarios').value.trim();
-    const msg = [
-      `*SOLICITUD DE COTIZACIÓN — Laboratorio Genus*`,
-      ``,
-      `*Datos del cliente*`,
-      `Nombre: ${state.nombre}`,
-      `Empresa: ${state.empresa || '—'}`,
-      `Email: ${state.email}`,
-      `WhatsApp: ${state.wa}`,
-      ``,
-      `*Detalle del proyecto*`,
-      `Producto: ${state.producto}`,
-      `Cantidad estimada: ${state.cantidad} unidades`,
-      `¿Tiene fórmula?: ${state.formula}`,
-      `¿Necesita desarrollo?: ${state.desarrollo}`,
-      `¿Tiene envases?: ${state.envases}`,
-      `¿Genus consigue envases?: ${state.packaging}`,
-      ``,
-      state.comentarios ? `*Comentarios:* ${state.comentarios}` : '',
-    ].filter(Boolean).join('\n');
-
-    const waUrl = `https://wa.me/5491124980861?text=${encodeURIComponent(msg)}`;
-    window.open(waUrl, '_blank');
-
-    document.querySelectorAll('.g-wizard-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.g-wizard-step-dot').forEach(d => d.classList.add('done'));
-    document.getElementById('successState').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+});
 </script>
 </body>
 </html>
