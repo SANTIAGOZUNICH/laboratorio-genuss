@@ -490,17 +490,19 @@ function svgGel(color, size) {
 }
 
 /* ── API pública ── */
+/* ── API pública ── */
 window.GENUS_MOCKUP = {
- getSVG(producto, color, size, marca = 'laboratorio Genus', nombreProducto = producto) {
+  getSVG(producto, color, size, marca = 'laboratorio Genus', nombreProducto = producto) {
     const s = size || 200;
     const col = color || 'Incoloro';
+
     switch(producto) {
-   case 'Serum': return svgSerum(col, s, marca, nombreProducto);
-case 'Crema': return svgCrema(col, s, marca, nombreProducto);
-case 'Shampoo': return svgShampoo(col, s, marca, nombreProducto);
-case 'Gel': return svgGel(col, s, marca, nombreProducto);
-      default:        return svgCrema(col, s);
+      case 'Serum': return svgSerum(col, s, marca, nombreProducto);
+      case 'Crema': return svgCrema(col, s, marca, nombreProducto);
+      case 'Shampoo': return svgShampoo(col, s, marca, nombreProducto);
+      case 'Gel': return svgGel(col, s, marca, nombreProducto);
+      default: return svgCrema(col, s);
     }
   },
-  FILL_COLORS,
+  FILL_COLORS: FILL_COLORS
 };
